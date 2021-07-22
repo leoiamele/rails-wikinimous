@@ -1,2 +1,10 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<div class="container w-50 mt-3">
+  <article>
+      <h1><%= @article.title %></h1>
+      <%= link_to 'Update Article', edit_article_path(@article) %>
+      <%= link_to 'Delete Article', article_path(@article), method:"delete" %>
+      <p><%= @article.content %></p>
+  </article>
+</div>
+
+
