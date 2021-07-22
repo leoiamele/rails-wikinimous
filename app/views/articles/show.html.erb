@@ -1,8 +1,12 @@
 <div class="container w-50 mt-3">
   <article>
       <h1><%= @article.title %></h1>
-      <%= link_to 'Update Article', edit_article_path(@article) %>
-      <%= link_to 'Delete Article', article_path(@article), method:"delete" %>
+      <%= link_to edit_article_path(@article) do %>
+        <i class="fa fa-pencil"></i>
+      <% end %>
+      <%= link_to article_path(@article), method:"delete" do %>
+      <i class="fa fa-trash-o"></i>
+      <% end  %>
       <p><%= @article.content %></p>
   </article>
 </div>
